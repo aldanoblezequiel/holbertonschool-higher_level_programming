@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    large = 0
-    i = 0
-    try:
-        for i in my_list:
-            if (large < x):
-                print(i, end="")
-                large += 1
-        print()
-    finally:
-        return (large)
+    size = 0
+    for i in range(0, x):
+        try:
+            print("{:d}".format(my_list[i]), end='')
+        except (IndexError, TypeError):
+            break
+        size += 1
+    print()
+    return size
