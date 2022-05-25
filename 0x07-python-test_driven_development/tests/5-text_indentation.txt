@@ -1,0 +1,43 @@
+5-text_indentation
+===================
+
+Module:
+	
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+==================
+TEST
+------------------
+
+Test 1: Deelimitation
+
+	>>> text_indentation(":?.")
+	:
+	<BLANKLINE>
+	?
+	<BLANKLINE>	
+	.
+	<BLANKLINE>
+
+Test 2: Having a ? at the end
+
+	>>> text_indentation("What a hell?")
+	What a hell?
+	<BLANKLINE>
+
+Test 3: None
+
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+Test 4: integer
+
+	>>> text_indentation(23)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+Test 5: space in the begining
+
+	>>> text_indentation("  vamos nacional vieja")
+	vamos nacional vieja
