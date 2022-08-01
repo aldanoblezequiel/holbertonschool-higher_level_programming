@@ -2,5 +2,5 @@
 if (process.argv.length === 2) {
   console.log('No argument');
 } else {
-  console.log(argv[0]);
+  console.log(process.argv[0]);
 }
